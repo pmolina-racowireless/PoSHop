@@ -1,0 +1,10 @@
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\bin\x86\Debug\wpftest.exe.config
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\bin\x86\Debug\wpftest.exe
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\bin\x86\Debug\wpftest.pdb
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.csprojResolveAssemblyReference.cache
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.Properties.Resources.resources
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.csproj.GenerateResource.Cache
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.exe
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.pdb
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.Form1.resources
+C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\obj\x86\Debug\wpftest.Form2.resources
