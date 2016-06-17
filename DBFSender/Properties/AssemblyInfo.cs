@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("wpftest")]
+[assembly: AssemblyTitle("DBFSender")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("RACO Wireless")]
-[assembly: AssemblyProduct("wpftest")]
-[assembly: AssemblyCopyright("Copyright © RACO Wireless 2016")]
+[assembly: AssemblyCompany("Innovosystems")]
+[assembly: AssemblyProduct("DBFSender")]
+[assembly: AssemblyCopyright("Copyright © Innovosystems 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

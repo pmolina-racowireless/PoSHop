@@ -2,14 +2,14 @@
 using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
-using wpftest.DataSet1TableAdapters;
-using wpftest.Properties;
+using DBFSender.DBFSetTableAdapters;
+using DBFSender.Properties;
 
-namespace wpftest
+namespace DBFSender
 {
-    public partial class Form1 : Form
+    public partial class DBFSenderForm : Form
     {
-        public Form1()
+        public DBFSenderForm()
         {
             InitializeComponent();
         }
@@ -17,12 +17,12 @@ namespace wpftest
         private void Form1_Load(object sender, EventArgs e)
         {
         
-        var dataSet1 = new DataSet1();
+        var dbfSet = new DBFSet();
         var factTA = new FacturaTableAdapter();
-            dataSet1.DataSetName = "DataSet1";
-            dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            factTA.Fill(dataSet1.Factura);
-            dataGridView1.DataSource = dataSet1.Factura;
+            dbfSet.DataSetName = "DBFSet";
+            dbfSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            factTA.Fill(dbfSet.Factura);
+            dataGridView1.DataSource = dbfSet.Factura;
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -34,6 +34,7 @@ namespace wpftest
             var destFile = string.Empty;
             var zipDest = string.Empty;
             var dbs = Settings.Default.DBFFiles;
+
             if (Directory.Exists(sourceDir) && Directory.Exists(destDir))
             {
                 string[] files = Directory.GetFiles(sourceDir);
@@ -49,10 +50,7 @@ namespace wpftest
                 }
                 //Zip the folder
                 zipDest = Path.Combine(destDir, Settings.Default.ZipFilename);
-                if (File.Exists(zipDest))
-                {
-                    File.Delete(zipDest);
-                }
+                if (File.Exists(zipDest)) File.Delete(zipDest);
                 ZipFile.CreateFromDirectory(tempDir, zipDest);
                 //Clean the temp folder
                 if (Settings.Default.CleanTempFolderFlag)

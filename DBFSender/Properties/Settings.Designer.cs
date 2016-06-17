@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace wpftest.Properties {
+namespace DBFSender.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -35,8 +35,7 @@ namespace wpftest.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\Visual Studio 2015\\Projects\\wpftest\\wpftest\\TablasSour" +
-            "ce")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\PoSHop\\DBFSender\\TablasSource")]
         public string SourceDirectory {
             get {
                 return ((string)(this["SourceDirectory"]));
@@ -66,8 +65,7 @@ namespace wpftest.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\Visual Studio 2015\\Projects\\wpftest\\wpftest\\TablasSour" +
-            "ce\\zipped")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\PoSHop\\DBFSender\\TablasSource\\zipped")]
         public string DestDirectory {
             get {
                 return ((string)(this["DestDirectory"]));
@@ -91,8 +89,7 @@ namespace wpftest.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\Visual Studio 2015\\Projects\\wpftest\\wpftest\\TablasSour" +
-            "ce\\temp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\pmolina\\Documents\\PoSHop\\DBFSender\\TablasSource\\temp")]
         public string TempDirectory {
             get {
                 return ((string)(this["TempDirectory"]));

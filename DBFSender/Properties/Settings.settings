@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="wpftest.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DBFSender.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
@@ -11,7 +11,7 @@
       <Value Profile="(Default)">Provider=VFPOLEDB.1;Data Source=C:\Users\pmolina\Downloads\Tablas\TablasSource</Value>
     </Setting>
     <Setting Name="SourceDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\TablasSource</Value>
+      <Value Profile="(Default)">C:\Users\pmolina\Documents\PoSHop\DBFSender\TablasSource</Value>
     </Setting>
     <Setting Name="DBFFiles" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -23,13 +23,13 @@
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="DestDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\TablasSource\zipped</Value>
+      <Value Profile="(Default)">C:\Users\pmolina\Documents\PoSHop\DBFSender\TablasSource\zipped</Value>
     </Setting>
     <Setting Name="ZipFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">Facturas.Zip</Value>
     </Setting>
     <Setting Name="TempDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\pmolina\Documents\Visual Studio 2015\Projects\wpftest\wpftest\TablasSource\temp</Value>
+      <Value Profile="(Default)">C:\Users\pmolina\Documents\PoSHop\DBFSender\TablasSource\temp</Value>
     </Setting>
     <Setting Name="CleanTempFolderFlag" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DBFSet" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.wpftest.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.DBFSender.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mercTableAdapter" GeneratorDataComponentClassName="mercTableAdapter" Name="merc" UserDataComponentName="mercTableAdapter">
@@ -350,10 +350,10 @@ SET                statussync = '0'</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+  <xs:element name="DBFSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="merc" msprop:Generator_TableClassName="mercDataTable" msprop:Generator_TableVarName="tablemerc" msprop:Generator_RowChangedName="mercRowChanged" msprop:Generator_TablePropName="merc" msprop:Generator_RowDeletingName="mercRowDeleting" msprop:Generator_RowChangingName="mercRowChanging" msprop:Generator_RowEvHandlerName="mercRowChangeEventHandler" msprop:Generator_RowDeletedName="mercRowDeleted" msprop:Generator_RowClassName="mercRow" msprop:Generator_UserTableName="merc" msprop:Generator_RowEvArgName="mercRowChangeEvent">
+        <xs:element name="merc" msprop:Generator_TableClassName="mercDataTable" msprop:Generator_TableVarName="tablemerc" msprop:Generator_TablePropName="merc" msprop:Generator_RowDeletingName="mercRowDeleting" msprop:Generator_RowChangingName="mercRowChanging" msprop:Generator_RowEvHandlerName="mercRowChangeEventHandler" msprop:Generator_RowDeletedName="mercRowDeleted" msprop:Generator_UserTableName="merc" msprop:Generator_RowChangedName="mercRowChanged" msprop:Generator_RowEvArgName="mercRowChangeEvent" msprop:Generator_RowClassName="mercRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" minOccurs="0" />
@@ -533,7 +533,7 @@ SET                statussync = '0'</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="movde" msprop:Generator_TableClassName="movdeDataTable" msprop:Generator_TableVarName="tablemovde" msprop:Generator_RowChangedName="movdeRowChanged" msprop:Generator_TablePropName="movde" msprop:Generator_RowDeletingName="movdeRowDeleting" msprop:Generator_RowChangingName="movdeRowChanging" msprop:Generator_RowEvHandlerName="movdeRowChangeEventHandler" msprop:Generator_RowDeletedName="movdeRowDeleted" msprop:Generator_RowClassName="movdeRow" msprop:Generator_UserTableName="movde" msprop:Generator_RowEvArgName="movdeRowChangeEvent">
+        <xs:element name="movde" msprop:Generator_TableClassName="movdeDataTable" msprop:Generator_TableVarName="tablemovde" msprop:Generator_TablePropName="movde" msprop:Generator_RowDeletingName="movdeRowDeleting" msprop:Generator_RowChangingName="movdeRowChanging" msprop:Generator_RowEvHandlerName="movdeRowChangeEventHandler" msprop:Generator_RowDeletedName="movdeRowDeleted" msprop:Generator_UserTableName="movde" msprop:Generator_RowChangedName="movdeRowChanged" msprop:Generator_RowEvArgName="movdeRowChangeEvent" msprop:Generator_RowClassName="movdeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="linea" msprop:Generator_ColumnVarNameInTable="columnlinea" msprop:Generator_ColumnPropNameInRow="linea" msprop:Generator_ColumnPropNameInTable="lineaColumn" msprop:Generator_UserColumnName="linea" type="xs:int" minOccurs="0" />
@@ -598,7 +598,7 @@ SET                statussync = '0'</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sucursales" msprop:Generator_TableClassName="sucursalesDataTable" msprop:Generator_TableVarName="tablesucursales" msprop:Generator_RowChangedName="sucursalesRowChanged" msprop:Generator_TablePropName="sucursales" msprop:Generator_RowDeletingName="sucursalesRowDeleting" msprop:Generator_RowChangingName="sucursalesRowChanging" msprop:Generator_RowEvHandlerName="sucursalesRowChangeEventHandler" msprop:Generator_RowDeletedName="sucursalesRowDeleted" msprop:Generator_RowClassName="sucursalesRow" msprop:Generator_UserTableName="sucursales" msprop:Generator_RowEvArgName="sucursalesRowChangeEvent">
+        <xs:element name="sucursales" msprop:Generator_TableClassName="sucursalesDataTable" msprop:Generator_TableVarName="tablesucursales" msprop:Generator_TablePropName="sucursales" msprop:Generator_RowDeletingName="sucursalesRowDeleting" msprop:Generator_RowChangingName="sucursalesRowChanging" msprop:Generator_RowEvHandlerName="sucursalesRowChangeEventHandler" msprop:Generator_RowDeletedName="sucursalesRowDeleted" msprop:Generator_UserTableName="sucursales" msprop:Generator_RowChangedName="sucursalesRowChanged" msprop:Generator_RowEvArgName="sucursalesRowChangeEvent" msprop:Generator_RowClassName="sucursalesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="tienda" msprop:Generator_ColumnVarNameInTable="columntienda" msprop:Generator_ColumnPropNameInRow="tienda" msprop:Generator_ColumnPropNameInTable="tiendaColumn" msprop:Generator_UserColumnName="tienda" type="xs:int" minOccurs="0" />
@@ -627,7 +627,7 @@ SET                statussync = '0'</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="movma" msprop:Generator_TableClassName="movmaDataTable" msprop:Generator_TableVarName="tablemovma" msprop:Generator_RowChangedName="movmaRowChanged" msprop:Generator_TablePropName="movma" msprop:Generator_RowDeletingName="movmaRowDeleting" msprop:Generator_RowChangingName="movmaRowChanging" msprop:Generator_RowEvHandlerName="movmaRowChangeEventHandler" msprop:Generator_RowDeletedName="movmaRowDeleted" msprop:Generator_RowClassName="movmaRow" msprop:Generator_UserTableName="movma" msprop:Generator_RowEvArgName="movmaRowChangeEvent">
+        <xs:element name="movma" msprop:Generator_TableClassName="movmaDataTable" msprop:Generator_TableVarName="tablemovma" msprop:Generator_TablePropName="movma" msprop:Generator_RowDeletingName="movmaRowDeleting" msprop:Generator_RowChangingName="movmaRowChanging" msprop:Generator_RowEvHandlerName="movmaRowChangeEventHandler" msprop:Generator_RowDeletedName="movmaRowDeleted" msprop:Generator_UserTableName="movma" msprop:Generator_RowChangedName="movmaRowChanged" msprop:Generator_RowEvArgName="movmaRowChangeEvent" msprop:Generator_RowClassName="movmaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" msprop:Generator_UserColumnName="numero" type="xs:int" minOccurs="0" />
@@ -721,7 +721,7 @@ SET                statussync = '0'</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_UserTableName="Factura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_RowEvArgName="FacturaRowChangeEvent" msprop:Generator_RowClassName="FacturaRow">
+        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_RowClassName="FacturaRow" msprop:Generator_UserTableName="Factura" msprop:Generator_RowEvArgName="FacturaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="factura" msprop:Generator_ColumnVarNameInTable="columnfactura" msprop:Generator_ColumnPropNameInRow="factura" msprop:Generator_ColumnPropNameInTable="facturaColumn" msprop:Generator_UserColumnName="factura" type="xs:int" minOccurs="0" />
