@@ -84,6 +84,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -95,10 +97,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBFSet.cs">
+    <Compile Include="Datasets\DBFSet.cs">
       <DependentUpon>DBFSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBFSet.Designer.cs">
+    <Compile Include="Datasets\DBFSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBFSet.xsd</DependentUpon>
@@ -109,6 +111,11 @@
     <Compile Include="DBFSenderForm.Designer.cs">
       <DependentUpon>DBFSenderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Helpers\DataTableHelper.cs" />
+    <Compile Include="Entity\Models\baseModel.cs" />
+    <Compile Include="Entity\Models\movde.cs" />
+    <Compile Include="Entity\Models\movma.cs" />
+    <Compile Include="Entity\Models\PoSHopDb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DBFSenderForm.resx">
@@ -124,15 +131,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DBFSet.xsc">
+    <None Include="Datasets\DBFSet.xsc">
       <DependentUpon>DBFSet.xsd</DependentUpon>
     </None>
-    <None Include="DBFSet.xsd">
+    <None Include="Datasets\DBFSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DBFSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DBFSet.xss">
+    <None Include="Datasets\DBFSet.xss">
       <DependentUpon>DBFSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -147,7 +154,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -167,6 +176,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

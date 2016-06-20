@@ -313,7 +313,20 @@
               <Mapping SourceColumn="ncf" DataSetColumn="ncf" />
               <Mapping SourceColumn="statussync" DataSetColumn="statussync" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="movma" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillToSync" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataToSync" GeneratorSourceName="FillToSync" GetMethodModifier="Public" GetMethodName="GetDataToSync" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataToSync" UserSourceName="FillToSync">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        movma.numero, movma.doc, movma.almacen, movma.cliente, movma.fecha, movma.vence, movma.vendedor, movma.orden, movma.conduce, movma.condicion, movma.comentario, movma.flujo, 
+                         movma.entidad, movma.pagares, movma.vencepag, movma.inicial, movma.fpago, movma.descper, movma.descval, movma.itbis, movma.itbisval, movma.bruto, movma.cargo, movma.transferid, 
+                         movma.transalm, movma.`time`, movma.impreso, movma.serial, movma.ddoc, movma.dnumero, movma.pgdo, movma.otrcargo, movma.ncf, movma.statussync
+FROM            movma, sucursales
+WHERE        movma.cliente = sucursales.tienda AND (movma.statussync = '0')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturaTableAdapter" GeneratorDataComponentClassName="FacturaTableAdapter" Name="Factura" UserDataComponentName="FacturaTableAdapter">
             <MainSource>
@@ -346,11 +359,21 @@ SET                statussync = '0'</CommandText>
               </DbCommand>
             </UpdateCommand>
           </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery1" MethodsParameterType="CLR" Modifier="Public" Name="UpdateQuery1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuery1">
+            <UpdateCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>UPDATE       movma
+SET                statussync = '0'
+WHERE        (cliente = 27)</CommandText>
+                <Parameters />
+              </DbCommand>
+            </UpdateCommand>
+          </DbSource>
         </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DBFSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+  <xs:element name="DBFSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DBFSet" msprop:Generator_UserDSName="DBFSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="merc" msprop:Generator_TableClassName="mercDataTable" msprop:Generator_TableVarName="tablemerc" msprop:Generator_TablePropName="merc" msprop:Generator_RowDeletingName="mercRowDeleting" msprop:Generator_RowChangingName="mercRowChanging" msprop:Generator_RowEvHandlerName="mercRowChangeEventHandler" msprop:Generator_RowDeletedName="mercRowDeleted" msprop:Generator_UserTableName="merc" msprop:Generator_RowChangedName="mercRowChanged" msprop:Generator_RowEvArgName="mercRowChangeEvent" msprop:Generator_RowClassName="mercRow">

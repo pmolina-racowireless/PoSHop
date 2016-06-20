@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DBFSender {
+namespace DBFSender.Datasets {
     
     
     /// <summary>
@@ -6714,7 +6714,7 @@ namespace DBFSender {
         }
     }
 }
-namespace DBFSender.DBFSetTableAdapters {
+namespace DBFSender.Datasets.DBFSetTableAdapters {
     
     
     /// <summary>
@@ -8039,11 +8039,19 @@ namespace DBFSender.DBFSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT `numero`, `doc`, `almacen`, `cliente`, `fecha`, `vence`, `vendedor`, `orden`, `conduce`, `condicion`, `comentario`, `flujo`, `entidad`, `pagares`, `vencepag`, `inicial`, `fpago`, `descper`, `descval`, `itbis`, `itbisval`, `bruto`, `cargo`, `transferid`, `transalm`, `time`, `impreso`, `serial`, `ddoc`, `dnumero`, `pgdo`, `otrcargo`, `ncf`, `statussync` FROM `movma`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        movma.numero, movma.doc, movma.almacen, movma.cliente, movma.fecha, movma.vence, movma.vendedor, movma.orden, movma.conduce, movma.condicion, movma.comentario, movma.flujo, 
+                         movma.entidad, movma.pagares, movma.vencepag, movma.inicial, movma.fpago, movma.descper, movma.descval, movma.itbis, movma.itbisval, movma.bruto, movma.cargo, movma.transferid, 
+                         movma.transalm, movma.`time`, movma.impreso, movma.serial, movma.ddoc, movma.dnumero, movma.pgdo, movma.otrcargo, movma.ncf, movma.statussync
+FROM            movma, sucursales
+WHERE        movma.cliente = sucursales.tienda AND (movma.statussync = '0')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8065,6 +8073,30 @@ namespace DBFSender.DBFSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DBFSet.movmaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DBFSet.movmaDataTable dataTable = new DBFSet.movmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillToSync(DBFSet.movmaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DBFSet.movmaDataTable GetDataToSync() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             DBFSet.movmaDataTable dataTable = new DBFSet.movmaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8432,11 +8464,16 @@ namespace DBFSender.DBFSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[1];
+            this._commandCollection = new global::System.Data.IDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[0])).Connection = new global::System.Data.OleDb.OleDbConnection(global::DBFSender.Properties.Settings.Default.ConnectionString);
             ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[0])).CommandText = "UPDATE       movma\r\nSET                statussync = \'0\'";
             ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[1])).Connection = new global::System.Data.OleDb.OleDbConnection(global::DBFSender.Properties.Settings.Default.ConnectionString);
+            ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[1])).CommandText = "UPDATE       movma\r\nSET                statussync = \'0\'\r\nWHERE        (cliente = " +
+                "27)";
+            ((global::System.Data.OleDb.OleDbCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8445,6 +8482,29 @@ namespace DBFSender.DBFSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateQuery() {
             global::System.Data.OleDb.OleDbCommand command = ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[0]));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery1() {
+            global::System.Data.OleDb.OleDbCommand command = ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[1]));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
