@@ -110,5 +110,16 @@ namespace DBFSender.Properties {
                 this["CleanTempFolderFlag"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.248.130.10,1533;Initial Catalog=PoSHop;Persist Security Info=True" +
+            ";User ID=sa")]
+        public string PoSHopConnectionString {
+            get {
+                return ((string)(this["PoSHopConnectionString"]));
+            }
+        }
     }
 }

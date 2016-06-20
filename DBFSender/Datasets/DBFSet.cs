@@ -2,7 +2,7 @@
 {
 }
 
-namespace DBFSender
+namespace DBFSender.Datasets
 {
 
 
@@ -11,7 +11,7 @@ namespace DBFSender
     }
 }
 
-namespace DBFSender.DBFSetTableAdapters
+namespace DBFSender.Datasets.DBFSetTableAdapters
 {
 
 

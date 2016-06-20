@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Windows.Forms;
-using DBFSender.DBFSetTableAdapters;
+using DBFSender.Datasets;
+using DBFSender.Datasets.DBFSetTableAdapters;
+using DBFSender.Entity.Models;
 using DBFSender.Properties;
+using DBFSender.Entity.Helpers;
 
 namespace DBFSender
 {
@@ -16,9 +22,9 @@ namespace DBFSender
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
-        var dbfSet = new DBFSet();
-        var factTA = new FacturaTableAdapter();
+
+            var dbfSet = new DBFSet();
+            var factTA = new FacturaTableAdapter();
             dbfSet.DataSetName = "DBFSet";
             dbfSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             factTA.Fill(dbfSet.Factura);
@@ -35,6 +41,8 @@ namespace DBFSender
             var zipDest = string.Empty;
             var dbs = Settings.Default.DBFFiles;
 
+            TransferToSQL();
+
             if (Directory.Exists(sourceDir) && Directory.Exists(destDir))
             {
                 string[] files = Directory.GetFiles(sourceDir);
@@ -45,7 +53,7 @@ namespace DBFSender
                     if (dbs.Contains(filename))
                     {
                         destFile = Path.Combine(tempDir, filename);
-                        File.Copy(s,destFile,true);
+                        File.Copy(s, destFile, true);
                     }
                 }
                 //Zip the folder
@@ -63,5 +71,22 @@ namespace DBFSender
                 }
             }
         }
+
+        private static void TransferToSQL()
+        {
+            var dbfSet = new DBFSet();
+            var movmaTA = new movmaTableAdapter();
+            movmaTA.FillToSync(dbfSet.movma);
+
+            var db = new PoSHopDb();
+            var movma = db.Set<movma>();
+            List<movma> movmaList = dbfSet.movma.ConvertToList<movma>();
+
+            movma.AddRange(movmaList);
+
+            db.SaveChanges();
+
+        }
+
     }
 }
