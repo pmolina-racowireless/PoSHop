@@ -35,3 +35,16 @@ C:\Users\michael\Documents\GitHub\PoSHop\DBFSender\obj\Debug\DBFSender.Propertie
 C:\Users\michael\Documents\GitHub\PoSHop\DBFSender\obj\Debug\DBFSender.csproj.GenerateResource.Cache
 C:\Users\michael\Documents\GitHub\PoSHop\DBFSender\obj\Debug\DBFSender.exe
 C:\Users\michael\Documents\GitHub\PoSHop\DBFSender\obj\Debug\DBFSender.pdb
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\DBFSender.exe.config
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\DBFSender.exe
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\DBFSender.pdb
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\EntityFramework.dll
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\EntityFramework.xml
+C:\Users\michael\Documents\PoSHop\DBFSender\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.csprojResolveAssemblyReference.cache
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.DBFSenderForm.resources
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.Properties.Resources.resources
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.csproj.GenerateResource.Cache
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.exe
+C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.pdb
