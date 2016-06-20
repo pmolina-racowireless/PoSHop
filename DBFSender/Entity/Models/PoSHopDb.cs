@@ -14,16 +14,7 @@ namespace DBFSender.Entity.Models
         public PoSHopDb()
             : base("name=PoSHopDb")
         {
-            var connstr =
-                "data source=173.248.130.10,1533;initial catalog=PoSHop;persist security info=True;user id=sa;password=InN0v02007t3@M;MultipleActiveResultSets=True;App=EntityFramework";
-            //var originalConnectionString = Database.Connection.ConnectionString;
-            //var entityBuilder = new EntityConnectionStringBuilder(originalConnectionString);
-            //var factory = DbProviderFactories.GetFactory(entityBuilder.Provider);
-            //var providerBuilder = factory.CreateConnectionStringBuilder();
-            //providerBuilder.ConnectionString = entityBuilder.ProviderConnectionString;
-
-            //providerBuilder.Add("Password", "InN0v02007t3@M");
-            //entityBuilder.ProviderConnectionString = providerBuilder.ToString();
+            const string connstr = "data source=173.248.130.10,1533;initial catalog=PoSHop;persist security info=True;user id=sa;password=InN0v02007t3@M;MultipleActiveResultSets=True;App=EntityFramework";
             Database.Connection.ConnectionString = connstr;
             Database.Connection.Open();
 

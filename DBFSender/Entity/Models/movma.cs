@@ -7,7 +7,7 @@ namespace DBFSender.Entity.Models
     using System.Data.Entity.Spatial;
 
     [Table("movma")]
-    public partial class movma : baseModel
+    public partial class movma : BaseModel
     {
         public int ID { get; set; }
 
