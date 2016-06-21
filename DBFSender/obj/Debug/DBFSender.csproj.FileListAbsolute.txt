@@ -48,3 +48,5 @@ C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.Properties.Resou
 C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.csproj.GenerateResource.Cache
 C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.exe
 C:\Users\michael\Documents\PoSHop\DBFSender\obj\Debug\DBFSender.pdb
+C:\Users\pmolina\Documents\PoSHop\DBFSender\bin\Debug\log4net.dll
+C:\Users\pmolina\Documents\PoSHop\DBFSender\bin\Debug\log4net.xml

@@ -49,8 +49,8 @@ namespace DBFSender.Entity.Helpers
                     object val = tableRow[colName];
 
                     // is this a Nullable<> type
-                    bool IsNullable = (Nullable.GetUnderlyingType(pInfo.PropertyType) != null);
-                    if (IsNullable)
+                    bool isNullable = (Nullable.GetUnderlyingType(pInfo.PropertyType) != null);
+                    if (isNullable)
                     {
                         if (val is System.DBNull)
                         {
